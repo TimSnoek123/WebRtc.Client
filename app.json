@@ -1,0 +1,12 @@
+{
+  "name": "TimTime",
+  "displayName": "TimTime",
+  "expo": {
+    "name": "TimTime",
+    "slug": "TimTime",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
