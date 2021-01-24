@@ -4,7 +4,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import * as webRtcClient from './webRtc/WebRtcClient'
 
-const hubUrl = 'https://localhost:5001/WebRtc'
+const hubUrl = 'https://localhost:44385/WebRtc'
 
 
 
@@ -28,8 +28,8 @@ export default function App() {
 
   hubConnection.on("OnOffer", (id, localDescription) => {
     webRtcClient.onOffer(id, localDescription, 
-      (id, localDescription) => hubConnection.send("SendAnswerAsync", id, localDescription),
-      (id, localDescription) => hubConnection.send("SendCandidateAsync", id, localDescription));
+      (id, localDescription) => hubConnection.send("OnAnswerAsync", id, localDescription),
+      (id, localDescription) => hubConnection.send("OnCandidateAsync", id, localDescription));
   })
 
   hubConnection.on("OnCandidate", (id, candidate) => {

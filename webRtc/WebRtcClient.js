@@ -38,6 +38,7 @@ export function CreateRTCConnection(id, sendOfferCallback, oneIceCandidateCallba
     console.log("establsishing conn");
     console.log(peerConnections);
 
+
     let stream = localStream;
 
     stream.getTracks().forEach(track => peerConnection.addTrack(track, stream));
